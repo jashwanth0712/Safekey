@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset = "UTF-8">
-      <title>Hello World!</title>
-   </head>
-   
-   <body>
-      <h1>Hello World!</h1>
-      We are using node <script>document.write(process.versions.node)</script>,
-      Chrome <script>document.write(process.versions.chrome)</script>,
-      and Electron <script>document.write(process.versions.electron)</script>.
-   </body>
+<head>
+  <meta charset="UTF-8">
+  <title>File Selector</title>
+  <style>
+    #selectedFiles {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openDialog()">Select Folder</button>
+  <div id="fileList"></div>
+  <div id="selectedFiles"></div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+    const selectedFilesDiv = document.getElementById('selectedFiles');
+
+    ipcRenderer.on('files', (event, files) => {
+      const fileListDiv = document.getElementById('fileList');
+
+      for (const file of files) {
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.name = 'file';
+        checkbox.value = file;
+
+        const label = document.createElement('label');
+        label.textContent = file;
+
+        checkbox.addEventListener('change', (event) => {
+          if (event.target.checked) {
+            displaySelectedFile(file);
+          } else {
+            removeSelectedFile(file);
+          }
+        });
+
+        fileListDiv.appendChild(checkbox);
+        fileListDiv.appendChild(label);
+        fileListDiv.appendChild(document.createElement('br'));
+      }
+    });
+
+    function displaySelectedFile(file) {
+      const selectedFileDiv = document.createElement('div');
+      selectedFileDiv.textContent = file;
+
+      selectedFilesDiv.appendChild(selectedFileDiv);
+    }
+
+    function removeSelectedFile(file) {
+      const selectedFileDivs = selectedFilesDiv.getElementsByTagName('div');
+      for (const div of selectedFileDivs) {
+        if (div.textContent === file) {
+          div.remove();
+          break;
+        }
+      }
+    }
+
+    function openDialog() {
+      ipcRenderer.send('open-dialog');
+    }
+  </script>
+</body>
 </html>
