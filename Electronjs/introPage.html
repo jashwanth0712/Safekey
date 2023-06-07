@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./introPageLoading.css" />
+    <link rel="stylesheet" href="./introPageMain.css">
+    <style>
+   
+    </style>
+  </head>
+
+  <body>
+
+    <div id="main">
+
+      <!-- this div takes care about both logo and navbar part  -->
+      <div class="navbar">
+        <!-- this div takes care about "logo" part  -->
+        <!-- <div class="logo">
+          <img src="../images/logo.jpg" alt="">
+        </div> -->
+
+        <!-- this nav takes care about "login" option  -->
+        <nav>
+          <ul>
+            <li>Login</li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- this div takes care about circle box of svg  -->
+      <div class="circle-box">
+        <svg height="402" width="402">
+          <circle r="200" cx="201" cy="201" stroke-width="1px" stroke="gray" fill="none"></circle>
+        </svg>
+
+        <svg height="402" width="402">
+          <circle r="200" cx="201" cy="201" stroke-width="1px" stroke="#fff" fill="none" id="svgCircle"></circle>
+        </svg>
+
+        <div>
+          <span id="step1"></span>
+          <span id="step2"></span>
+          <span id="step3"></span>
+          <span id="step4"></span>
+          <span id="step5"></span>
+        </div>
+      </div>
+
+      <div class="user-box" id="userBox">
+        <div class="user" >
+          <!-- <img src="./images/demo1.jfif" alt=""> -->
+          <h3>Virtual Security 1</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi facere esse rerum ullam autem</p> -->
+        </div>
+
+        <!-- copy 1  -->
+        <!-- <div class="user" id="user2">
+          <img src="../images/demo1.jfif" alt="">
+          <h3>Virtual Security 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi facere esse rerum ullam autem</p>
+        </div> -->
+
+        <!-- copy 2  -->
+        <!-- <div class="user" id="user3">
+          <img src="../images/demo1.jfif" alt="">
+          <h3>Virtual Security 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi facere esse rerum ullam autem</p>
+        </div> -->
+
+        <!-- copy 3  -->
+        <!-- <div class="user" id="user4">
+          <img src="../images/demo1.jfif" alt="">
+          <h3>Virtual Security 4</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi facere esse rerum ullam autem</p>
+        </div> -->
+
+        <!-- copy 4  -->
+        <!-- <div class="user" id="user5">
+          <img src="../images/demo1.jfif" alt="">
+          <h3>Virtual Security 5</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi facere esse rerum ullam autem</p>
+        </div> -->
+      </div>
+    </div>
+
+
+    <!-- this is old page intro  -->
+    <!-- <div class="container">
+      <a href="introPage.html">Get Started</a>
+    </div> -->
+
+    <!-- this part is used for LOADING PAGE  -->
+
+    <div class="loading-page">
+      <svg xmlns="http://www.w3.org/2000/svg" height="15em" id="svg" viewBox="0 0 512 512"><style></style><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></svg>
+
+      <div class="name-container">
+        <div class="logo-name">Security at it's peak</div>
+      </div>
+    </div>
+
+  </body>
+
+  <!-- this script contains "gsap" link  -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- the below script is actual javascript link for loading page -->
+  <script src="./introPageLoading.js"></script>
+
+  <!-- this script is for intro page circle svg  -->
+  <script src="./introPageMain.js"></script>
+</html>
