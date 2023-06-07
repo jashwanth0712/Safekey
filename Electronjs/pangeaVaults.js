@@ -1,4 +1,5 @@
 import { PangeaConfig, VaultService, PangeaErrors, Vault } from "pangea-node-sdk";
+import User from "pangea-node-sdk/dist/cjs/services/authn/user";
 
 //below details in organisation
 const PANGEA = {
@@ -50,7 +51,7 @@ const vault = new VaultService(PANGEA.VAULT_AUTH_TOKEN, config);
         "hello key dulicate test",
         "test-hello-key",
         {
-          folder: "/secrets",
+          folder: "/secrets4",
           metadata: {
             "created_by": "ninn",
             "used_in": "testing"
@@ -63,3 +64,30 @@ const vault = new VaultService(PANGEA.VAULT_AUTH_TOKEN, config);
     );
     console.log(response);
     })();
+
+
+function CreateFolderForNewUser(USER_ID){
+    let folderName = "/"+USER_ID;
+    (async () => {
+        const response = await vault.secretStore(
+            "hello key dulicate test",
+            "test-hello-key",
+            {
+              folder: folderName,
+              metadata: {
+                "created_by": "ninn",
+                "used_in": "testing"
+              },
+              tags: ["these_are_tags", "these_are_tags2"],
+            //   rotation_frequency: "10d",
+            //   rotation_state: Vault.ItemVersionState.DEACTIVATED,
+            //   expiration: "2025-01-01T10:00:00Z",
+            }
+        );
+        console.log("Created folder succesfully!");
+        console.log(response);
+        console.log(folderName);
+        })();
+}
+
+export default CreateFolderForNewUser;
