@@ -123,15 +123,16 @@ span{
 }
 
 .user{
-    /* border: 2px solid red; */
-    /* transform: translate(56px, 146px);
-    width: 244px; */
-    /* height: 194px; */
     /* height: 450px; */
     border: 2px solid red;
     /* height: 194px; */
     /* height: 450px; */
-    transform: translate(14px, 119px);
+    transform: translate(-18px, 191px);
+    font-size: 20px;
+}
+
+.user h3{
+
 }
 
 .user img{
