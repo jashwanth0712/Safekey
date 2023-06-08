@@ -1,0 +1,17 @@
+/* this is for side bar page back button   */
+#backButton{
+    margin: 16px 19px;
+}
+
+#backButton button{
+    padding: 4px 13px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+/* this is for select folder part  */
+#selectFolder{
+    margin: 77px 20px;
+    padding: 4px 55px;
+    border: 6px double;
+}

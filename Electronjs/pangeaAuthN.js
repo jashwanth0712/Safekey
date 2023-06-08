@@ -5,7 +5,6 @@ import {
     AuthN,
   } from "pangea-node-sdk";
 
-import CreateFolderForNewUser from "./pangeaVaults.js";
 
 const PANGEA = {
     PANGEA_DOMAIN : "aws.us.pangea.cloud",
@@ -33,13 +32,6 @@ const PROFILE_INITIAL = { name: "User name", country: "Argentina" };
       );
       console.log("Create user success. Result: ", createResp.result.id);
       let USER_ID = createResp.result.id;
-      if(createResp.body.status === "Success"){
-        try{
-            CreateFolderForNewUser(USER_ID);
-        }catch(err){
-            console.log(err);
-        }
-      }
     } catch (err) {
       if (err instanceof PangeaErrors.APIError) {
         console.log("Something went wrong...");
