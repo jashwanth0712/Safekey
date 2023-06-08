@@ -78,8 +78,8 @@ svg{
 /* this is for creating dots on circle  */
 span{
     position: absolute;
-    height: 10px;
-    width: 10px;
+    height: 17px;
+    width: 16px;
     background: #fff;
     border-radius: 50%;
     display: block;
@@ -89,22 +89,22 @@ span{
 
 #step1{
     right: 149px;
-    bottom: 32px;
+    bottom: 28px;
 }
 #step2{
     right: 387px;
     bottom: 111px;
 }
 #step3{
-    right: 389px;
+    right: 384px;
     bottom: 326px;
 }
 #step4{
     right: 158px;
-    bottom: 409px;
+    bottom: 407px;
 }
 #step5{
-    right: 20px;
+    right: 18px;
     bottom: 220px;
 }
 
@@ -123,15 +123,16 @@ span{
 }
 
 .user{
+    /* height: 450px; */
     /* border: 2px solid red; */
-    /* transform: translate(56px, 146px);
-    width: 244px; */
     /* height: 194px; */
     /* height: 450px; */
-    border: 2px solid red;
-    /* height: 194px; */
-    /* height: 450px; */
-    transform: translate(14px, 119px);
+    transform: translate(0px, 226px);
+    font-size: 20px;
+}
+
+.user h3{
+
 }
 
 .user img{
@@ -143,4 +144,36 @@ span{
 .user-box p{
     margin: 20px 0;
     color: #c0c0c0;
+}
+
+/* this is for button  */
+.button{
+    margin: 485px 497px;
+    font-size: 30px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    border: 5px double;
+    margin: 10px 54px;
+}
+
+
+/* this is for side bar page back button   */
+#backButton{
+    margin: 16px 19px;
+}
+
+#backButton button{
+    padding: 4px 13px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+/* this is for select folder part  */
+#selectFolder{
+    margin: 77px 20px;
+    padding: 4px 55px;
+    border: 6px double;
 }
