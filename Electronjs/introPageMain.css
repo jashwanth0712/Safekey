@@ -1,6 +1,6 @@
 /* this css page is used for intro page css part   */
 
-#main{
+#main {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -13,7 +13,7 @@
 }
 
 /* this is for navbar part  */
-.navbar{
+.navbar {
     width: 85%;
     margin: auto;
     display: flex;
@@ -21,22 +21,22 @@
     padding-top: 30px;
 }
 
-.logo{
+.logo {
     flex-basis: 20%;
 }
 
-.logo img{
+.logo img {
     width: 78px;
     cursor: pointer;
     border-radius: 81px;
 }
 
-nav{
+nav {
     flex: 1;
     text-align: right;
 }
 
-nav ul li{
+nav ul li {
     border: 2px solid;
     padding: 7px 14px;
     border-radius: 10px;
@@ -50,7 +50,7 @@ nav ul li{
 
 
 /* this is for circle part */
-.circle-box{
+.circle-box {
     position: absolute;
     height: 450px;
     width: 450px;
@@ -61,7 +61,7 @@ nav ul li{
 
 
 /* this is used to overlay one circle on another  */
-svg{
+svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -69,14 +69,14 @@ svg{
 }
 
 /* this is for taking circumference of the circle  */
-#svgCircle{
+#svgCircle {
     stroke-dasharray: 1256;
     stroke-dashoffset: 1256;
     transition: 1s;
 }
 
 /* this is for creating dots on circle  */
-span{
+span {
     position: absolute;
     height: 10px;
     width: 10px;
@@ -87,30 +87,34 @@ span{
     /* z-index: 10; */
 }
 
-#step1{
+#step1 {
     right: 149px;
     bottom: 32px;
 }
-#step2{
+
+#step2 {
     right: 387px;
     bottom: 111px;
 }
-#step3{
+
+#step3 {
     right: 389px;
     bottom: 326px;
 }
-#step4{
+
+#step4 {
     right: 158px;
     bottom: 409px;
 }
-#step5{
+
+#step5 {
     right: 20px;
     bottom: 220px;
 }
 
 
 /* this is for content inside the circle  */
-.user-box{
+.user-box {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 350px;
     position: absolute;
@@ -122,7 +126,7 @@ span{
     transition: 1s;
 }
 
-.user{
+.user {
     /* height: 450px; */
     border: 2px solid red;
     /* height: 194px; */
@@ -131,29 +135,35 @@ span{
     font-size: 20px;
 }
 
-.user h3{
 
-}
-
-.user img{
+.user img {
     width: 80px;
     margin-bottom: 10px;
     border-radius: 50%;
 }
 
-.user-box p{
+.user-box p {
     margin: 20px 0;
     color: #c0c0c0;
 }
 
 /* this is for button  */
-.button{
+.button {
     margin: 485px 497px;
-    font-size: 30px;
+    width: 100%;
+    height: 100%;
 }
 
-.button a{
+button {
+    padding: 15px 30px;
+    border: 7px double;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    font-size: 20px;
+}
+
+a {
     text-decoration: none;
-    color: white;
-    border: 5px double;
 }
