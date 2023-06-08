@@ -17,9 +17,6 @@
         <i class="bx bx-menu" id="btn"></i>
       </div>
       <ul class="nav-list">
-        
-       
-        
         <li>
           <a href="#">
             <i class="bx bx-chat"></i>
@@ -48,27 +45,34 @@
           </a>
           <span class="tooltip">Update Key</span>
         </li>
-       
-        <li class="profile">
-          <div class="profile_details">
-            <img src="profile.jpeg" alt="profile image" />
-            <div class="profile_content">
-              <div class="name">User</div>
-              <div class="designation">Admin</div>
+
+        <a href="introPage.html">
+          <li class="profile">
+            <div class="profile_details">
+              <img src="profile.jpeg" alt="profile image" />
+              <div class="profile_content">
+                <div class="name">User</div>
+                <div class="designation">Admin</div>
+                <!-- <a href="introPage.html"></a> -->
+              </div>
             </div>
-          </div>
-          <i class="bx bx-log-out" id="log_out"></i>
-        </li>
+            <i class="bx bx-log-out" id="log_out"> </i>
+          </li>
+        </a>
       </ul>
     </div>
     <section class="home-section">
       <div class="text">Dashboard</div>
-      <div id="newUsbID" style="display:none;">
-        <a href="sidebar.html">Back <-- </a>
-  <button onclick="openDialog()">Select Folder</button>
-  <div id="fileList"></div>
-  <div id="selectedFiles"></div>
-
+      <div id="newUsbID" style="display: none">
+        <div id="backButton" style="
+        margin: 16px 19px;">
+          <a href="sidebar.html">
+            <button>Back <-- </button>
+          </a>
+        </div>
+        <button id="selectFolder" onclick="openDialog()">Select Folder</button>
+        <div id="fileList"></div>
+        <div id="selectedFiles"></div>
       </div>
     </section>
     <!-- Scripts -->
