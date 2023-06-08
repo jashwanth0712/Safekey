@@ -124,4 +124,4 @@ async function UpdatePendriveKey(VAULT_ID, key){
     }
 }
 
-export {GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey};
+export default {GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey};
