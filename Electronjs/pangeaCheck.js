@@ -1,5 +1,25 @@
-import { CreateFolderForNewUser, GetUserKeys, GetValuesOfKey } from "./pangeaVaults.js";
+import {GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey} from "./pangeaVaults.js";
 
-console.log(CreateFolderForNewUser("pui_upc3svgagbcxq2rzketfnfm7tjo73nkn"));
+// InsertNewPendrive("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo", "initialKey3", "intialFileLocations").then(result => {
+//     console.log(result);
+// });
 
-// GetValuesOfKey("pvi_3oubdppqootac7uhtfy57znsb4xc342y");
+// GetUserPendrives("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo").then(result => {
+//     console.log(result);
+// });
+
+// GetFileLocations("pvi_gjx2dhqvyrcymrewzt4k3k7ys6rmud7n").then(result => {
+//     console.log(result);
+// });
+
+// DeletePendrive("pvi_nmi7lwoloplvs6ytsva3qox37ehcboaw").then(result =>{
+//     console.log(result);
+// });
+
+// UpdatePendriveLocations("pvi_gjx2dhqvyrcymrewzt4k3k7ys6rmud7n", "newLocations").then(result =>{
+//     console.log(result);
+// });
+
+// UpdatePendriveKey("pvi_gjx2dhqvyrcymrewzt4k3k7ys6rmud7n", "newKey").then(result =>{
+//     console.log(result);
+// });
