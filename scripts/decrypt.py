@@ -4,7 +4,11 @@ import os
 import subprocess
 import stat
 from cryptography.fernet import Fernet
-
+#-----------------------variables------------------------------
+path=r'C:\Users\jashw\OneDrive\Desktop\Pangea\Safekey\scripts\test'
+# Construct the path for the key file
+drive_name='D'
+key_file_path = f'${drive_name}:\thekey.key'
 #-------------------------functions------------------------------
 def set_write_permission(file_path):
     # Set write permission for the file
@@ -37,13 +41,11 @@ def unhide_single_file(file_path):
         pass
 
 #------------------------------------------------------
-path=r'C:\Users\jashw\OneDrive\Desktop\Pangea\Safekey\scripts\test'
 unhide_files(path)
 files = list_files(path)
 print(files)
 
-# Construct the path for the key file
-key_file_path = r'D:\thekey.key'
+
 
 # Check if the key file exists
 if os.path.exists(key_file_path):
