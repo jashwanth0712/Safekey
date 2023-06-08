@@ -21,3 +21,10 @@ window.onload = function(){
         }
     }
 }
+
+function clickNewusb(){
+    // let usb = document.getElementById('newUsbID');
+    // usb.style
+    document.getElementById("newUsbID").style.display = "block";
+    
+}

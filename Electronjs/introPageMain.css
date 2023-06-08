@@ -145,3 +145,15 @@ span{
     margin: 20px 0;
     color: #c0c0c0;
 }
+
+/* this is for button  */
+.button{
+    margin: 485px 497px;
+    font-size: 30px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    border: 5px double;
+}

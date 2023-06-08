@@ -28,7 +28,7 @@
           <span class="tooltip">Update USB</span>
         </li>
         <li>
-          <a href="#">
+          <a onclick="clickNewusb()">
             <i class="bx bx-pie-chart-alt-2"></i>
             <span class="link_name">New USB</span>
           </a>
@@ -63,8 +63,16 @@
     </div>
     <section class="home-section">
       <div class="text">Dashboard</div>
+      <div id="newUsbID" style="display:none;">
+        <a href="sidebar.html">Back <-- </a>
+  <button onclick="openDialog()">Select Folder</button>
+  <div id="fileList"></div>
+  <div id="selectedFiles"></div>
+
+      </div>
     </section>
     <!-- Scripts -->
     <script src="sidebar.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
