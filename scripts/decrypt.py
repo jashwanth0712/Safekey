@@ -4,6 +4,7 @@ import os
 import subprocess
 import stat
 from cryptography.fernet import Fernet
+
 #-------------------------functions------------------------------
 def set_write_permission(file_path):
     # Set write permission for the file
@@ -11,6 +12,7 @@ def set_write_permission(file_path):
         os.chmod(file_path, stat.S_IWRITE)
     except:
         pass
+
 #function to get all the files in a given folder
 def list_files(directory):
     file_list = []
@@ -34,17 +36,23 @@ def unhide_single_file(file_path):
     except:
         pass
 
-
 #------------------------------------------------------
 path=r'C:\Users\jashw\OneDrive\Desktop\Pangea\Safekey\scripts\test'
 unhide_files(path)
 files = list_files(path)
 print(files)
-# Generating a key
-key = ''
-with open("thekey.key", "rb") as key_file:
-    key = key_file.read()
-print(key)
+
+# Construct the path for the key file
+key_file_path = r'D:\thekey.key'
+
+# Check if the key file exists
+if os.path.exists(key_file_path):
+    # Read the key from the file
+    with open(key_file_path, "rb") as key_file:
+        key = key_file.read()
+        print(key)
+else:
+    print(f"Key file '{key_file_path}' not found.")
 
 for file in files:
     with open(file, "rb") as thefile:
