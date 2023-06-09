@@ -1,5 +1,5 @@
 // this part is for background image change 
-main.style.backgroundImage = "url(./images/bg1.jfif)";
+main.style.backgroundImage = "url(./images/img1.png)";
 
 var userBox = document.getElementById("userBox");
 
@@ -14,28 +14,28 @@ var step5 = document.getElementById("step5");
 // this part is for circle covering 
 step1.addEventListener('click', ()=>{
     svgCircle.style.strokeDashoffset = "1004";
-    main.style.backgroundImage = "url(./images/bg2.jfif)";
+    main.style.backgroundImage = "url(./images/img2.png)";
     // userBox.style.top = "-350px";
 })
 
 step2.addEventListener('click', ()=>{
     svgCircle.style.strokeDashoffset = "748";
-    main.style.backgroundImage = "url(./images/bg3.jfif)";
+    main.style.backgroundImage = "url(./images/img3.png)";
     // userBox.style.top = "-100px";
 })
 
 step3.addEventListener('click', ()=>{
     svgCircle.style.strokeDashoffset = "510";
-    main.style.backgroundImage = "url(./images/bg4.jfif)";
+    main.style.backgroundImage = "url(./images/img4.png)";
     // userBox.style.top = "-1250px";
 })
 
 step4.addEventListener('click', ()=>{
     svgCircle.style.strokeDashoffset = "247";
-    main.style.backgroundImage = "url(./images/bg5.jfif)";
+    main.style.backgroundImage = "url(./images/img5.png)";
 })
 
 step5.addEventListener('click', ()=>{
     svgCircle.style.strokeDashoffset = "0";
-    main.style.backgroundImage = "url(./images/bg1.jfif)";
+    main.style.backgroundImage = "url(./images/img1.png)";
 })
