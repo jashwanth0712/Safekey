@@ -38,6 +38,6 @@ const { SignUp, SignIn } = pkg2;
 SignUp(USER_EMAIL, PASSWORD_INITIAL).then(result => {
     console.log(result);
 });
-SignIn(USER_EMAIL, PASSWORD_INITIAL).then(result => {
-    console.log(result);
-});
+// SignIn(USER_EMAIL, PASSWORD_INITIAL).then(result => {
+//     console.log(result);
+// });

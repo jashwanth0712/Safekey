@@ -25,6 +25,8 @@ window.onload = function(){
 function clickNewusb(){
     // let usb = document.getElementById('newUsbID');
     // usb.style
+    document.getElementById("Carousel").style.display = "none";
     document.getElementById("newUsbID").style.display = "block";
     
 }
+
