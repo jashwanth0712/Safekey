@@ -1,14 +1,22 @@
-#!/use/bin/env python3
+#!/usr/bin/env python3
 
 import os
 import subprocess
 import stat
+import sys
 from cryptography.fernet import Fernet
+
 #-----------------------variables------------------------------
-path=r'C:\Users\jashw\OneDrive\Desktop\Pangea\Safekey\scripts\test'
+# Extract folder path and drive name from command line arguments
+if len(sys.argv) < 3:
+    print("less arguments")
+    sys.exit(1)
+
+path = sys.argv[1]
+drive_name = sys.argv[2]
+
 # Construct the path for the key file
-drive_name='D'
-key_file_path = f'${drive_name}:\thekey.key'
+key_file_path = f'{drive_name}:\\thekey.key'
 #-------------------------functions------------------------------
 def set_write_permission(file_path):
     # Set write permission for the file
@@ -45,7 +53,7 @@ unhide_files(path)
 files = list_files(path)
 print(files)
 
-
+key=''
 
 # Check if the key file exists
 if os.path.exists(key_file_path):
