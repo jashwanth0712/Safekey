@@ -13,11 +13,7 @@ function createWindow() {
     },
   });
 
-<<<<<<< HEAD
   mainWindow.loadFile('test.html');
-=======
-  mainWindow.loadFile('introPage.html');
->>>>>>> 6072f3e5e374dc616365c34a9f2f46183e75b0ad
 }
 
 function openFileDialog() {
