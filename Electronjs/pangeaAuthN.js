@@ -1,10 +1,9 @@
-import {
+const {
   PangeaConfig,
   AuthNService,
   PangeaErrors,
   AuthN,
-} from "pangea-node-sdk";
-
+} = require('pangea-node-sdk');
 
 const PANGEA = {
   PANGEA_DOMAIN: "aws.us.pangea.cloud",
@@ -47,4 +46,7 @@ async function SignIn(USER_EMAIL, PASSWORD_INITIAL) {
   }
 }
 
-export default { SignUp, SignIn };
+// export default { SignUp, SignIn };
+
+module.exports = { SignUp, SignIn };
+
