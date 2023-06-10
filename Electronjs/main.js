@@ -3,12 +3,6 @@ const fileListDiv = document.getElementById("fileList");
 const selectedFilesDiv = document.getElementById("selectedFiles");
 const electron = require("electron");
 
-// Enable live reload for Electron too
-require("electron-reload")(__dirname, {
-  // Note that the path to electron may vary according to the main file
-  electron: require(`${__dirname}/node_modules/electron`),
-});
-
 let SelectedFolderPath = "";
 
 //this still not working
