@@ -103,15 +103,21 @@ function RunInsertNewPendrive(){
     value = value+SelectedFolderPath + childElement.textContent+",";
   }
   let pendriveDropdown = document.getElementById("SelectedUsb");
-  if(pendriveDropdown.value !== 'None'){
-    console.log("this is not new pendrive");
+  if(pendriveDropdown.value === 'None'){
+    try {
+      InsertNewPendrive(localStorage.getItem("USER_ID", newKey, value)).then(result => {
+          console.log(result);
+      });
+      //insertion complete
+    } catch (error) {
+      console.error(error);
+    }
     return ;
   }
   try {
     UpdatePendriveLocations(localStorage.getItem("email"), pendriveDropdown.value, value).then(result => {
         console.log(result);
     });
-    //insertion complete
   } catch (error) {
     console.error(error);
   }
