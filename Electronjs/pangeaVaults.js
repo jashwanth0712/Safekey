@@ -1,4 +1,4 @@
-import { PangeaConfig, VaultService, PangeaErrors, Vault } from "pangea-node-sdk";
+const { PangeaConfig, VaultService, PangeaErrors, Vault } = require("pangea-node-sdk");
 
 const PANGEA = {
   PANGEA_DOMAIN: "aws.us.pangea.cloud",
@@ -27,13 +27,24 @@ async function GetUserPendrives(EMAIL) {
     );
     // console.log(response.result);
     // console.log(response.result.items[0]);
+    // console.log(response.result.items[1]);
     return response.result;
   } catch (err) {
     return "error";
   }
 }
 
-async function GetFileLocations(VAULT_ID) {
+async function GetFileLocations(EMAIL, UsbKey) {
+  let currentPendrives = await GetUserPendrives(EMAIL);
+  let i = 0;
+  let VAULT_ID = "";
+  for (i = 0; i < currentPendrives.items.length; i++) {
+    if(currentPendrives.items[i].name === UsbKey){
+      VAULT_ID = currentPendrives.items[i].id;
+      break;
+    }
+  }
+
   try {
     const response = await vault.getItem(
       VAULT_ID,
@@ -124,4 +135,4 @@ async function UpdatePendriveKey(VAULT_ID, key) {
   }
 }
 
-export default { GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey };
+module.exports = { GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey };

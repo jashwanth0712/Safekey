@@ -45,6 +45,7 @@ function retrieveEntries(data) {
 
 function createDropdown(entries) {
     const dropdown = document.createElement('select');
+    dropdown.id = "SelectedUsb";
     for (const entry of entries) {
         const option = document.createElement('option');
         option.value = entry.value;

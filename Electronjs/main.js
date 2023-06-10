@@ -96,14 +96,19 @@ function openDialog() {
 const { GetUserPendrives, GetFileLocations, InsertNewPendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
 
 function RunInsertNewPendrive(){
+  const { GetUserPendrives, GetFileLocations, InsertNewPendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
   const selectedFileDivs = selectedFilesDiv.getElementsByTagName('div');
   let value="";
   for (const childElement of selectedFileDivs) {
     value = value+SelectedFolderPath + childElement.textContent+",";
   }
-
+  let pendriveDropdown = document.getElementById("SelectedUsb");
+  if(pendriveDropdown.value !== 'None'){
+    console.log("this is not new pendrive");
+    return ;
+  }
   try {
-    InsertNewPendrive(localStorage.getItem("email"), key, value).then(result => {
+    UpdatePendriveLocations(localStorage.getItem("email"), pendriveDropdown.value, value).then(result => {
         console.log(result);
     });
     //insertion complete
