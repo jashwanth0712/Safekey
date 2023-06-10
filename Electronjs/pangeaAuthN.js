@@ -22,6 +22,7 @@ async function SignUp(USER_EMAIL, PASSWORD_INITIAL) {
       AuthN.IDProvider.PASSWORD,
       // { profile: PROFILE_INITIAL }
     );
+    localStorage.setItem("USER_ID", response.result.active_token.identity);
     return createResp.result;
   } catch (err) {
     return "error";
@@ -40,6 +41,7 @@ async function SignIn(USER_EMAIL, PASSWORD_INITIAL) {
       //   },
       // }
     );
+    localStorage.setItem("USER_ID", response.result.active_token.identity);
     return response.result;
   } catch (err) {
     return "error";

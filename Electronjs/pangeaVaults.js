@@ -8,12 +8,13 @@ const PANGEA = {
 const config = new PangeaConfig({ domain: PANGEA.PANGEA_DOMAIN });
 const vault = new VaultService(PANGEA.VAULT_AUTH_TOKEN, config);
 
-async function GetUserPendrives(EMAIL) {
+//good
+async function GetUserPendrives(USER_ID) {
   try {
     const response = await vault.list(
       {
         filter: {
-          folder: "/" + EMAIL,
+          folder: "/" + USER_ID,
           // type: "asymmetric_key",
           // name__contains: "test",
           // metadata_key1: "value1",
@@ -34,8 +35,9 @@ async function GetUserPendrives(EMAIL) {
   }
 }
 
-async function GetFileLocations(EMAIL, UsbKey) {
-  let currentPendrives = await GetUserPendrives(EMAIL);
+//good
+async function GetFileLocations(USER_ID, UsbKey) {
+  let currentPendrives = await GetUserPendrives(USER_ID);
   let i = 0;
   let VAULT_ID = "";
   for (i = 0; i < currentPendrives.items.length; i++) {
@@ -60,8 +62,9 @@ async function GetFileLocations(EMAIL, UsbKey) {
   }
 }
 
-async function InsertNewPendrive(EMAIL, key, value) {
-  let folderName = "/" + EMAIL;
+//good
+async function InsertNewPendrive(USER_ID, key, value) {
+  let folderName = "/" + USER_ID;
   try {
     const response = await vault.secretStore(
       value,
@@ -80,22 +83,46 @@ async function InsertNewPendrive(EMAIL, key, value) {
     );
     return response.result;
   } catch (err) {
-    return "error";
+    return err;
   }
 }
 
-async function DeletePendrive(VAULT_ID) {
+//good
+async function DeletePendrive(USER_ID, key) {
+
+  let currentPendrives = await GetUserPendrives(USER_ID);
+  let i = 0;
+  let VAULT_ID = "";
+  for (i = 0; i < currentPendrives.items.length; i++) {
+    if(currentPendrives.items[i].name === UsbKey){
+      VAULT_ID = currentPendrives.items[i].id;
+      break;
+    }
+  }
+
   try {
     const response = await vault.delete(
       VAULT_ID
     );
     return response.result;
-  } catch {
+  } catch (err) {
     return "error";
   }
 }
 
-async function UpdatePendriveLocations(VAULT_ID, value) {
+//good
+async function UpdatePendriveLocations(USER_ID, key, value) {
+
+  let currentPendrives = await GetUserPendrives(USER_ID);
+  let i = 0;
+  let VAULT_ID = "";
+  for (i = 0; i < currentPendrives.items.length; i++) {
+    if(currentPendrives.items[i].name === UsbKey){
+      VAULT_ID = currentPendrives.items[i].id;
+      break;
+    }
+  }
+
   try {
     const response = await vault.secretRotate(
       VAULT_ID,
@@ -105,12 +132,24 @@ async function UpdatePendriveLocations(VAULT_ID, value) {
       }
     );
     return response.result;
-  } catch {
+  } catch (err) {
     return "error";
   }
 }
 
-async function UpdatePendriveKey(VAULT_ID, key) {
+//good
+async function UpdatePendriveKey(USER_ID, key) {
+
+  let currentPendrives = await GetUserPendrives(USER_ID);
+  let i = 0;
+  let VAULT_ID = "";
+  for (i = 0; i < currentPendrives.items.length; i++) {
+    if(currentPendrives.items[i].name === UsbKey){
+      VAULT_ID = currentPendrives.items[i].id;
+      break;
+    }
+  }
+
   try {
     const response = await vault.update(
       VAULT_ID,

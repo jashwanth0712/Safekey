@@ -2,7 +2,7 @@
 
 const { GetUserPendrives, GetFileLocations, InsertNewPendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
 
-// InsertNewPendrive("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo", "initialKey3", "intialFileLocations").then(result => {
+// InsertNewPendrive("sairushik1903@gmail.com", "initialKey3", "intialFileLocations").then(result => {
 //     console.log(result);
 // });
 
@@ -10,19 +10,19 @@ const { GetUserPendrives, GetFileLocations, InsertNewPendrive, UpdatePendriveLoc
 //     console.log(result);
 // });
 
-GetFileLocations("sairushik1903@gmail.com", ).then(result => {
-    console.log(result);
-});
-
-// DeletePendrive("pvi_nmi7lwoloplvs6ytsva3qox37ehcboaw").then(result =>{
+// GetFileLocations("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo", "initialKey").then(result => {
 //     console.log(result);
 // });
 
-// UpdatePendriveLocations("pvi_gjx2dhqvyrcymrewzt4k3k7ys6rmud7n", "newLocations").then(result =>{
+// DeletePendrive("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo", "initialKey").then(result =>{
 //     console.log(result);
 // });
 
-// UpdatePendriveKey("pvi_gjx2dhqvyrcymrewzt4k3k7ys6rmud7n", "newKey").then(result =>{
+// UpdatePendriveLocations("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo", "initialKey","newLocations").then(result =>{
+//     console.log(result);
+// });
+
+// UpdatePendriveKey("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo", "newKey").then(result =>{
 //     console.log(result);
 // });
 
@@ -33,10 +33,10 @@ GetFileLocations("sairushik1903@gmail.com", ).then(result => {
 
 // const { SignUp, SignIn } = require('./pangeaAuthN.js');
 
-// SignUp(USER_EMAIL, PASSWORD_INITIAL).then(result => {
-//     console.log(result);
-// });
+// // SignUp(USER_EMAIL, PASSWORD_INITIAL).then(result => {
+// //     console.log(result);
+// // });
 
-// SignIn(USER_EMAIL, PASSWORD_INITIAL).then(result => {
+// SignIn("sairushik1903@gmail.com", "Rushik@1903").then(result => {
 //     console.log(result);
 // });
