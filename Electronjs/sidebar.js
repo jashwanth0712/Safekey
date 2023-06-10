@@ -8,10 +8,10 @@ window.onload = function(){
         menuBtnChange()
     })
 
-    searchBtn.addEventListener("click",function(){
-        sidebar.classList.toggle("open")
-        menuBtnChange()
-    })
+    // searchBtn.addEventListener("click",function(){
+    //     sidebar.classList.toggle("open")
+    //     menuBtnChange()
+    // })
 
     function menuBtnChange(){
         if(sidebar.classList.contains("open")){
@@ -20,8 +20,7 @@ window.onload = function(){
             closeBtn.classList.replace("bx-menu-alt-right","bx-menu")
         }
     }
-
-    document.getElementById("emailArea").textContent = window.email;
+    document.getElementById("emailArea").textContent = localStorage.getItem("email");
 }
 
 function clickNewusb(){

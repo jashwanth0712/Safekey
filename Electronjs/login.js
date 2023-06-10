@@ -11,8 +11,7 @@ async function Login() {
     try {
       SignIn(usernameEle.value, passwordEle.value).then(result => {
           console.log(result);
-          window.globalVariable = usernameEle.value;
-          console.log(window.globalVariable);
+          localStorage.setItem("email", usernameEle.value);
           window.location.href = 'sidebar.html';
       });
     } catch (error) {
