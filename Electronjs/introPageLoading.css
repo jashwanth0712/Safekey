@@ -13,6 +13,8 @@
 
   box-sizing: border-box;
 
+ 
+
 }
 
 
@@ -62,8 +64,8 @@ body {
 
   left: 0;
 
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-
+  /* background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
+ background-color: #0d0a3e;
 
 
 
@@ -163,4 +165,34 @@ body {
 
   /* margin: 20px 0px; */
 
+}
+
+#logoId{
+  height: 100px;
+  width: 100px;
+  border: 8px double white;
+  border-radius: 50px;
+} 
+
+
+
+
+#logoId {
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.2);
+    filter: brightness(150%);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
 }

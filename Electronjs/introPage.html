@@ -1,82 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./introPageLoading.css" />
+    <link rel="stylesheet" href="./introPageMain.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./introPageLoading.css" />
-  <link rel="stylesheet" href="./introPageMain.css">
-  <style>
+    <style>
+      html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
-  </style>
-</head>
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
 
-<body>
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
 
-  <div id="main">
-    <a href="login.html" class="get-started"><button>Get Started</button></a>
-    <!-- this div takes care about circle box of svg  -->
-    <div class="circle-box">
-      <svg height="402" width="402">
-        <circle r="200" cx="201" cy="201" stroke-width="1px" stroke="gray" fill="none"></circle>
-      </svg>
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      <svg height="402" width="402">
-        <circle r="200" cx="201" cy="201" stroke-width="1px" stroke="#fff" fill="none" id="svgCircle"></circle>
-      </svg>
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
+  </head>
 
-      <div>
-        <span id="step1"></span>
-        <span id="step2"></span>
-        <span id="step3"></span>
-        <span id="step4"></span>
-        <span id="step5"></span>
+  <body>
+    <div class="loading-page">
+      <svg  height="15em" id="svg" viewBox="0 0 512 512">
+        <style></style>
+        <img src="./images/logo.png" alt="" id="logoId">
+  </svg>
+  
+  
+      <div class="name-container">
+        <div class="logo-name">Security at it's peak</div>
       </div>
     </div>
 
-    <div class="user-box" id="userBox">
-      <div class="user">
-        <!-- <img src="./images/demo1.jfif" alt=""> -->
-        <h3>Virtual Security 1</h3>
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi facere esse rerum ullam autem</p> -->
-      </div>
-    </div>
-  </div>
+    
 
+    
+  </body>
 
-  <!-- this is old page intro  -->
-  <!-- <div class="container">
-      <a href="introPage.html">Get Started</a>
-    </div> -->
+  <!-- this script contains "gsap" link  -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- the below script is actual javascript link for loading page -->
+  <script src="./introPageLoading.js"></script>
 
-  <!-- this part is used for LOADING PAGE  -->
+  <!-- this script is for intro page circle svg  -->
+  <script src="./introPageMain.js"></script>
+  <script src="./login.js"></script>
 
-  <div class="loading-page">
-    <svg xmlns="http://www.w3.org/2000/svg" height="15em" id="svg" viewBox="0 0 512 512">
-      <style></style>
-      <path
-        d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z" />
-    </svg>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <div class="name-container">
-      <div class="logo-name">Security at it's peak</div>
-    </div>
-  </div>
-
-</body>
-
-<!-- this script contains "gsap" link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-  integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- the below script is actual javascript link for loading page -->
-<script src="./introPageLoading.js"></script>
-
-<!-- this script is for intro page circle svg  -->
-<script src="./introPageMain.js"></script>
-<script src="./login.js"></script>
-
-
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>
