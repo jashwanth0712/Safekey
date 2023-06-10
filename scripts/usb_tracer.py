@@ -19,5 +19,6 @@ while True:
         if drive not in current_disks:
             print('|_ Removable disk removed from drive', drive)
             # Additional actions can be performed here if needed
+    print(current_disks)
     previous_disks = current_disks
     time.sleep(2)
