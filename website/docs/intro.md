@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# #SafeKey
+# SafeKey
  Unveiling the Hidden Vault of Encrypted Files
 
 
