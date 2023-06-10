@@ -80,6 +80,7 @@
   </div>
   <section class="home-section">
     <div class="text">Dashboard</div>
+    <p id="emailArea"></p>
     <!--below code is corousel-->
     <div class="container" id="Carousel">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -129,7 +130,7 @@
     <div id="newUsbID" style="display:none;">
       <a href="sidebar.html">Back <-- </a>
           <button onclick="openDialog()">Select Folder</button>
-          <button id="getValues">Get Values</button>
+          <button onclick="GetValues()">Get Values</button>
           <div id="fileList"></div>
           <div id="selectedFiles"></div>
     </div>

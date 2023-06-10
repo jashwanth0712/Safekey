@@ -1,11 +1,18 @@
 const { ipcRenderer } = require('electron');
+const fileListDiv = document.getElementById('fileList');
 const selectedFilesDiv = document.getElementById('selectedFiles');
 
+let SelectedFolderPath = "";
+
+//this still not working
+ipcRenderer.on('selected-folder', (event, folderPath) => {
+  // Do something with the selected folder path
+  // console.log('Selected folder:', folderPath);
+  console.log("here");
+  SelectedFolderPath = folderPath;
+});
+
 ipcRenderer.on('files', (event, files) => {
-  const fileListDiv = document.getElementById('fileList');
-
- 
-
   for (const file of files) {
     const selectedFileDiv = document.createElement('div');
     selectedFileDiv.classList.add('selected-file');
@@ -62,23 +69,40 @@ function removeSelectedFile(file) {
 }
 
 function GetValues(){
-  const selectedFileDivs = selectedFilesDiv.getElementsByTagName('div');
+  console.log("here");
+  const selectedFileDivs = fileListDiv.getElementsByTagName('div');
+  console.log(selectedFileDivs);
   let value="";
-  for (const parentDiv of selectedFileDivs) {
-    // const parentDiv = document.getElementById('parent-div');
-    const childElements = parentDiv.querySelectorAll('div'); // Selecting all <div> child elements
-
-    // Accessing individual child elements
+  for (const div of selectedFileDivs) {
+    const childElements = div.querySelectorAll('input');
     childElements.forEach(childElement => {
-      // Do something with each child element
-      console.log(childElement);
-      if(childElement.tagName === 'input'){
-        value = value+childElement.value;
+      if(childElement.tagName === 'INPUT'){
+        value = value+SelectedFolderPath + childElement.value+",";
       }
     });
+  }
+  console.log(value);
+}
+
+function EmptyTheFileList() {
+  const selectedFileDivs = selectedFilesDiv.getElementsByTagName('div');
+  const fileDivs = fileListDiv.getElementsByTagName('div');
+  console.log(selectedFileDivs);
+  console.log(fileDivs);
+  for (const div of selectedFileDivs) {
+    console.log(div.textContent);
+    div.remove();
+  }
+  for (const div of fileDivs) {
+    console.log("here");
+    console.log(div);
+    console.log(div.textContent);
+    div.remove();
   }
 }
 
 function openDialog() {
+  console.log("clicked slect folder");
+  EmptyTheFileList();
   ipcRenderer.send('open-dialog');
 }
