@@ -88,7 +88,7 @@ async function InsertNewPendrive(USER_ID, key, value) {
 }
 
 //good
-async function DeletePendrive(USER_ID, key) {
+async function DeletePendrive(USER_ID, UsbKey) {
 
   let currentPendrives = await GetUserPendrives(USER_ID);
   let i = 0;

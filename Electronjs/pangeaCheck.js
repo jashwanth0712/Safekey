@@ -1,10 +1,12 @@
 // import {GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey} from "./pangeaVaults.js";
 
-const { GetUserPendrives, GetFileLocations, InsertNewPendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
+const { GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
 
-// InsertNewPendrive("sairushik1903@gmail.com", "initialKey3", "intialFileLocations").then(result => {
-//     console.log(result);
-// });
+// let user_id = localStorage.getItem("USER_ID");
+
+InsertNewPendrive("pui_3p7j5h2py7dolzwxp65yhsiihl34bzpw", "ukfkkjcckghtclxk", "intialFileLocations").then(result => {
+    console.log(result);
+});
 
 // GetUserPendrives("pui_qfwvkt2foxyia4ofjlkw4o3ei5374qlo").then(result => {
 //     console.log(result);

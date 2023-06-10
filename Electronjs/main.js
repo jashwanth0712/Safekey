@@ -17,10 +17,6 @@ ipcRenderer.on("files", (event, files) => {
   for (const file of files) {
     const selectedFileDiv = document.createElement("div");
     selectedFileDiv.classList.add("selected-file");
-
-
- 
-
     const checkbox = document.createElement('input');
     checkbox.className = 'custom-checkbox'
     checkbox.type = 'checkbox';
@@ -51,7 +47,7 @@ ipcRenderer.on("files", (event, files) => {
 function displaySelectedFile(file) {
   const selectedFileDiv = document.createElement("div");
   selectedFileDiv.textContent = file;
-
+  selectedFileDiv.style.display = "none";
   selectedFilesDiv.appendChild(selectedFileDiv);
 }
 
@@ -83,7 +79,6 @@ function EmptyTheFileList() {
 }
 
 function openDialog() {
-  console.log("clicked slect folder");
   EmptyTheFileList();
   ipcRenderer.send("open-dialog");
 }
@@ -99,13 +94,10 @@ const {
 } = require("./pangeaVaults.js");
 
 function RunInsertNewPendrive() {
-  const {
-    GetUserPendrives,
-    GetFileLocations,
-    InsertNewPendrive,
-    UpdatePendriveLocations,
-    UpdatePendriveKey,
-  } = require("./pangeaVaults.js");
+  
+  const { GetUserPendrives, GetFileLocations, InsertNewPendrive, DeletePendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
+
+
   const selectedFileDivs = selectedFilesDiv.getElementsByTagName("div");
   let value = "";
   for (const childElement of selectedFileDivs) {

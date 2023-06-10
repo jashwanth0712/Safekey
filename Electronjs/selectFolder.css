@@ -6,11 +6,11 @@
   }
 
 
-  #styleButton {
+  .selectFolder {
     padding: 15px 2px;
     border-radius: 21px;
     font-size: 25px;
-    width: 510px;
+    width: 434px;
     border: 2px dotted;
     /* margin: 2px -21px; */
     justify-content: center;
@@ -46,7 +46,7 @@
 #fileList{
     /* border: 2px solid black; */
     width: 337px;
-    margin: 33px 260px;
+    /* margin: 33px 260px; */
 }
 
 
@@ -55,7 +55,7 @@
     padding: 7px 61px;
     border-radius: 13px;
     width: 434px;
-    margin: 16px 200px;
+    /* margin: 16px 200px; */
 }
 
 
@@ -64,7 +64,7 @@
     display: inline-block;
     vertical-align: middle;
     padding: 4px;
-    margin-right: 8px;
+    /* margin-right: 8px; */
     border: 2px solid #007bff;
     border-radius: 4px;
     height: 23px;
@@ -107,11 +107,15 @@
   }
 
 
-  #styleButton{
+  .selectFolder{
     padding: 15px 2px;
-    border-radius: 21px;
+    border-radius: 100px;
     font-size: 25px;
-    width: 510px;
-    border: 2px dotted;
-    margin: 2px 84px;
+    width: 434px;
+    /* border: 2px dotted; */
+    /* margin: 2px 84px; */
+  }
+
+  .selectDropDown{
+    width: 434px;
   }

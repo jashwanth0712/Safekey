@@ -45,6 +45,10 @@ function retrieveEntries(data) {
 
 function createDropdown(entries) {
     const dropdown = document.createElement('select');
+    dropdown.classList.add("form-select");
+    dropdown.classList.add("selectDropDown");
+    dropdown.style.width = "434px";
+    dropdown.style.backgroundColor = "#0D6EFD";
     dropdown.id = "SelectedUsb";
     for (const entry of entries) {
         const option = document.createElement('option');
@@ -52,5 +56,6 @@ function createDropdown(entries) {
         option.text = entry.type;
         dropdown.appendChild(option);
     }
+    console.log(dropdown);
     return dropdown;
 }
