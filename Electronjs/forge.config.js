@@ -12,12 +12,18 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-deb',
+      platforms:['linux'],
       config: {},
     },
     {
       name: '@electron-forge/maker-rpm',
       config: {},
     },
+    {
+      name: '@electron-forge/maker-snap',
+        platforms:['linux'],
+        config:{}
+    }
     
   ],
 };
