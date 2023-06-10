@@ -1,7 +1,7 @@
 const { spawn } = require('child_process');
 
 function get_usb() {
-    const pythonScriptPath = 'C:\\Users\\jashw\\OneDrive\\Desktop\\Pangea\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
     const scriptArgs = ['-gu'];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
