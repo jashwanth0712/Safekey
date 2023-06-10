@@ -7,22 +7,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
+    "dev": "nodemon --exec electron .",
     "package": "electron-forge package",
-    "package-lin":"electron-forge package --platform=linux " ,
+    "package-lin": "electron-forge package --platform=linux ",
     "make": "electron-forge make",
     "build-installer": "electron-builder"
   },
   "build": {
     "appId": "SafeKey",
-    "linux":{
-      "target":[
+    "linux": {
+      "target": [
         "snap",
         "AppImage",
         "deb",
         "rpm"
       ],
-    "icon":"ico.ico"
-  
+      "icon": "ico.ico"
     },
     "win": {
       "target": [
@@ -30,7 +30,6 @@
       ],
       "icon": "icon.ico"
     },
-   
     "nsis": {
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
@@ -65,16 +64,19 @@
       "makers": [
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": ["darwin"], 
-          "config": {
-          }
+          "platforms": [
+            "darwin"
+          ],
+          "config": {}
         },
         {
           "name": "@electron-forge/maker-deb",
-          "platforms" : ["linux"],
+          "platforms": [
+            "linux"
+          ],
           "config": {}
         }
-    ]
-  }
+      ]
+    }
   }
 }

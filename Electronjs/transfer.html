@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            border: 5px solid black;
+            padding: 30px;
+            gap: 200px;
+        }
+
+        button {
+            padding: 15px 30px;
+            cursor: pointer;
+            background-color: rgb(255, 182, 47);
+            border-radius: 10px;
+            transition: all 0.6s;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div>
+                <p>From</p>
+                <button>Select USB1</button>
+            </div>
+            <div>
+                <p>To</p>
+                <button>Select USB2</button>
+            </div>
+        </div>
+        <div>
+            <button>Transfer</button>
+        </div>
+    </div>
+    <a href="sidebar.html">Go to dashboard</a>
+</body>
+
+</html>
