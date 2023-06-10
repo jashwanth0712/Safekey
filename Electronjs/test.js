@@ -1,14 +1,24 @@
 const { spawn } = require('child_process');
 
-function runPythonScript() {
-    const pythonScriptPath = 'C:\Users\jashw\OneDrive\Desktop\Pangea\Safekey\scripts\safekey.py';
+function get_usb() {
+    const pythonScriptPath = 'C:\\Users\\jashw\\OneDrive\\Desktop\\Pangea\\Safekey\\scripts\\safekey.py';
     const scriptArgs = ['-gu'];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
 
     pythonProcess.stdout.on('data', (data) => {
-        const output = data.toString();
-        document.getElementById('output').innerText = output;
+        const entries = retrieveEntries(data);
+        console.log(entries);
+        // const output = data.toString();
+        // document.getElementById('output').innerText = output;
+
+        const select_usb_button = document.getElementById('select-usb-button');
+        select_usb_button.style.display = 'none';
+        const dropdown = createDropdown(entries);
+
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = '';
+        outputDiv.appendChild(dropdown);
     });
 
     pythonProcess.stderr.on('data', (data) => {
@@ -19,4 +29,27 @@ function runPythonScript() {
     pythonProcess.on('close', (code) => {
         console.log('Python script exited with code:', code);
     });
+}
+
+function retrieveEntries(data) {
+    const entries = [];
+    const lines = data.toString().split('\n').map(line => line.trim());
+    for (const line of lines) {
+        const parts = line.split(' ');
+        const entry = { type: parts[0], value: parts[3] };
+        if (parts[3] !== undefined)
+            entries.push(entry);
+    }
+    return entries;
+}
+
+function createDropdown(entries) {
+    const dropdown = document.createElement('select');
+    for (const entry of entries) {
+        const option = document.createElement('option');
+        option.value = entry.value;
+        option.text = entry.type;
+        dropdown.appendChild(option);
+    }
+    return dropdown;
 }
