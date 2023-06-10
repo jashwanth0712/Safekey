@@ -17,9 +17,11 @@ ipcRenderer.on('files', (event, files) => {
     const selectedFileDiv = document.createElement('div');
     selectedFileDiv.classList.add('selected-file');
 
+
  
 
     const checkbox = document.createElement('input');
+    checkbox.className = 'custom-checkbox'
     checkbox.type = 'checkbox';
     checkbox.name = 'file';
     checkbox.value = file;
@@ -28,6 +30,7 @@ ipcRenderer.on('files', (event, files) => {
 
     const label = document.createElement('label');
     label.textContent = file;
+    label.className = 'custom-label';
 
  
 

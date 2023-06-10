@@ -1,10 +1,10 @@
-const { app, BrowserWindow, dialog, ipcMain } = require('electron');
-const fs = require('fs');
+const { app, BrowserWindow, dialog, ipcMain } = require("electron");
+const fs = require("fs");
 
 let mainWindow;
 
 function createWindow() {
-   mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -13,19 +13,15 @@ function createWindow() {
     },
   });
 
-<<<<<<< HEAD
-  mainWindow.loadFile('test.html');
-=======
-  mainWindow.loadFile('introPage.html');
->>>>>>> 6072f3e5e374dc616365c34a9f2f46183e75b0ad
+  mainWindow.loadFile("main.html");
 }
 
 function openFileDialog() {
   dialog
     .showOpenDialog({
-      properties: ['openDirectory'],
-      buttonLabel: 'Select Folder',
-      title: 'Select a folder',
+      properties: ["openDirectory"],
+      buttonLabel: "Select Folder",
+      title: "Select a folder",
     })
     .then((result) => {
       if (!result.canceled) {
@@ -45,25 +41,25 @@ function readFilesFromFolder(folderPath) {
       return;
     }
 
-    mainWindow.webContents.send('files', files);
+    mainWindow.webContents.send("files", files);
   });
 }
 
 app.whenReady().then(() => {
   createWindow();
 
-  ipcMain.on('open-dialog', () => {
+  ipcMain.on("open-dialog", () => {
     openFileDialog();
   });
 });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });
 
-app.on('activate', () => {
+app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
