@@ -7,12 +7,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
+    "dev": "nodemon --exec electron .",
     "package": "electron-forge package",
+    "package-lin": "electron-forge package --platform=linux ",
     "make": "electron-forge make",
     "build-installer": "electron-builder"
   },
   "build": {
     "appId": "SafeKey",
+    "linux": {
+      "target": [
+        "snap",
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "icon": "ico.ico"
+    },
     "win": {
       "target": [
         "nsis"
@@ -47,5 +58,25 @@
     "electron-builder": "^23.6.0",
     "nodemon": "^2.0.22",
     "pangea-node-sdk": "^1.9.0"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ],
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "platforms": [
+            "linux"
+          ],
+          "config": {}
+        }
+      ]
+    }
   }
 }
