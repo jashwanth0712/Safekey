@@ -8,12 +8,12 @@ const PANGEA = {
 const config = new PangeaConfig({ domain: PANGEA.PANGEA_DOMAIN });
 const vault = new VaultService(PANGEA.VAULT_AUTH_TOKEN, config);
 
-async function GetUserPendrives(USER_ID) {
+async function GetUserPendrives(EMAIL) {
   try {
     const response = await vault.list(
       {
         filter: {
-          folder: "/" + USER_ID,
+          folder: "/" + EMAIL,
           // type: "asymmetric_key",
           // name__contains: "test",
           // metadata_key1: "value1",
@@ -49,8 +49,8 @@ async function GetFileLocations(VAULT_ID) {
   }
 }
 
-async function InsertNewPendrive(USER_ID, key, value) {
-  let folderName = "/" + USER_ID;
+async function InsertNewPendrive(EMAIL, key, value) {
+  let folderName = "/" + EMAIL;
   try {
     const response = await vault.secretStore(
       value,

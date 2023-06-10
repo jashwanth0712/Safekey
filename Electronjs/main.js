@@ -68,22 +68,6 @@ function removeSelectedFile(file) {
   }
 }
 
-function GetValues(){
-  console.log("here");
-  const selectedFileDivs = fileListDiv.getElementsByTagName('div');
-  console.log(selectedFileDivs);
-  let value="";
-  for (const div of selectedFileDivs) {
-    const childElements = div.querySelectorAll('input');
-    childElements.forEach(childElement => {
-      if(childElement.tagName === 'INPUT'){
-        value = value+SelectedFolderPath + childElement.value+",";
-      }
-    });
-  }
-  console.log(value);
-}
-
 function EmptyTheFileList() {
   const selectedFileDivs = selectedFilesDiv.getElementsByTagName('div');
   const fileDivs = fileListDiv.getElementsByTagName('div');
@@ -105,4 +89,25 @@ function openDialog() {
   console.log("clicked slect folder");
   EmptyTheFileList();
   ipcRenderer.send('open-dialog');
+}
+
+/*--------using apis on buttons--------*/
+
+const { GetUserPendrives, GetFileLocations, InsertNewPendrive, UpdatePendriveLocations, UpdatePendriveKey } = require("./pangeaVaults.js");
+
+function RunInsertNewPendrive(){
+  const selectedFileDivs = selectedFilesDiv.getElementsByTagName('div');
+  let value="";
+  for (const childElement of selectedFileDivs) {
+    value = value+SelectedFolderPath + childElement.textContent+",";
+  }
+
+  try {
+    InsertNewPendrive(localStorage.getItem("email"), key, value).then(result => {
+        console.log(result);
+    });
+    //insertion complete
+  } catch (error) {
+    console.error(error);
+  }
 }
