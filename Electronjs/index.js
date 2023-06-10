@@ -13,7 +13,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile('test.html');
+  mainWindow.loadFile('main.html');
 }
 
 function openFileDialog() {

@@ -23,11 +23,13 @@ ipcRenderer.on('files', (event, files) => {
     checkbox.type = 'checkbox';
     checkbox.name = 'file';
     checkbox.value = file;
-
+    checkbox.className = 'custom-checkbox'
+    
  
 
     const label = document.createElement('label');
     label.textContent = file;
+    label.className = 'custom-label';
 
  
 
