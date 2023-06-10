@@ -108,7 +108,7 @@ span {
     bottom: 407px;
 }
 
-#step5{
+#step5 {
     right: 18px;
     bottom: 220px;
 }
@@ -168,19 +168,31 @@ span {
 a {
     text-decoration: none;
 }
+
+.get-started button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    border: 5px double red;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
 /* this is for side bar page back button   */
-#backButton{
+#backButton {
     margin: 16px 19px;
 }
 
-#backButton button{
+#backButton button {
     padding: 4px 13px;
     font-size: 15px;
     border-radius: 10px;
 }
 
 /* this is for select folder part  */
-#selectFolder{
+#selectFolder {
     margin: 77px 20px;
     padding: 4px 55px;
     border: 6px double;

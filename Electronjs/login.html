@@ -7,20 +7,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 50px;
+      border-radius: 30px;
+      border: 3px solid black;
+    }
+
+    h4 {
+      font-size: 30px;
+    }
+
+    input {
+      padding: 12px 24px;
+      width: 300px;
+      border-radius: 10px;
+      border: 2px dotted black;
+    }
+
+    .main button {
+      padding: 8px 20px;
+      border-radius: 10px;
+      background-color: rgb(255, 182, 47);
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.6s;
+    }
+
+    .main button:hover {
+      background-color: greenyellow;
+    }
   </style>
 </head>
 
 <body>
-
-  <div id="main">
-
-    <div>
-      <input value="abc@abc.com" id = "USERNAME">
-      <input value="Abc@1234" id = "PASSWORD">
-      <button onclick="Login()" id="submit">submit</button>
+  <div class="container">
+    <h4>Safe Login with SafeKey</h4>
+    <div class="main">
+      <input value="abc@abc.com" id="USERNAME" placeholder="Email">
+      <input value="Abc@1234" id="PASSWORD" placeholder="Password">
+      <button onclick="Login()" id="submit">Login</button>
     </div>
-<script src="./login.js"></script>
+  </div>
+  <script src="login.js"></script>
 
 
 </html>
