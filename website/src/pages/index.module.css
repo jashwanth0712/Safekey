@@ -8,6 +8,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: #1A024D !important;
 }
 
 @media screen and (max-width: 996px) {
