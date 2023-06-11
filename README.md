@@ -1,4 +1,5 @@
 # Safe Key: Secure File Protection Software
+![poster](https://github.com/jashwanth0712/Safekey/blob/main/Electronjs/images/SAFE%20KEYb.jpg?raw=true)
 Safe Key is a powerful software solution designed to keep files secure by utilizing a USB device as a key. With Safe Key, you can ensure the confidentiality and integrity of your sensitive data through encryption and secure storage. This software provides an extra layer of protection for users who require enhanced security measures.
 
 ### File Encryption and Hiding 🔐
