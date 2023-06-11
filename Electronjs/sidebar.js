@@ -86,6 +86,8 @@ function retrieveEntries(data) {
 async function OnClickDeleteUsb(){
     let dropDownForDelete = document.getElementById("DeletingUsbDropdown");
     let type=""
+    console.log(dropDownForDelete);
+    console.log(dropDownForDelete.value);
     if(dropDownForDelete.value==="None"){
         console.log("pendrive already empty");
         return ;
@@ -113,7 +115,7 @@ async function OnClickDeleteUsb(){
         output=data.toString()
         console.log(data.toString());
         setTimeout(() => {
-            window.location.href = 'animation.html';
+            // window.location.href = 'animation.html';
         }, 3); //
     });pythonProcess.on('error', (error) => {
         console.error('An error occurred while executing the Python script:', error);
@@ -199,6 +201,7 @@ function createDropdownDelete(entries) {
     dropdown.style.width = "434px";
     dropdown.style.backgroundColor = "#0D6EFD";
     dropdown.id = "DeletingUsbDropdown";
+    console.log("entrie :"+entries[0].toString());
     for (const entry of entries) {
         const option = document.createElement('option');
         option.value = entry.value;
@@ -294,7 +297,16 @@ function get_usb_for_retrieve() {
 
 async function retriveUsb(){
     let usbDropdown = document.getElementById("RetrieveUsbDropdown");
-    let type = usbDropdown.text;
+    let type = "";
+    
+    let selectedOption = usbDropdown.options[usbDropdown.selectedIndex];
+    if (selectedOption.value !== "") {
+        type = selectedOption.text;
+        console.log("type: ", type);
+        let key = selectedOption.value;
+      } else {
+        console.log("No option selected");
+      }
     let key = usbDropdown.value;
     if(key !== 'None'){
         console.log("pendrive not None");
