@@ -89,6 +89,20 @@
     .loginStyling{
       display: flex;
     }
+
+    #buttonID{
+      display: flex;
+      margin: 46px 175px;
+    }
+
+    .buttonClass{
+      margin: 2px 26px;
+      padding: 10px 2px;
+      border-radius: 13px;
+      width: 256px;
+      background-color: #442c85;
+      border: 2px solid #442c85;
+    }
   </style>
 </head>
 
@@ -153,56 +167,24 @@
 
           <div class="swiper-slide">
             <img src="./images/img2.png" alt="" class="image">
-            <div class="loginStyling">
-              <div class="text-overlay pID">
-                <p id="emailArea"></p>
-                <a href="https://safe-key.vercel.app/" target="_blank">
-                  <img src="./images/logo.png" alt="" class="loginID">
-                </a>
-              </div>
-
-            </div>
+            
           </div>
 
           <div class="swiper-slide">
             <img src="./images/img3.png" alt="" class="image">
-            <div class="loginStyling">
-              <div class="text-overlay pID" >
-                <p id="emailArea"></p>
-                <a href="https://safe-key.vercel.app/" target="_blank">
-                  <img src="./images/logo.png" alt="" class="loginID">
-                </a>
-              </div>
-
-            </div>
+            
           </div>
 
           <div class="swiper-slide">
             <img src="./images/img4.png" alt="" class="image">
-            <div class="loginStyling">
-              <div class="text-overlay pID">
-                <p id="emailArea"></p>
-                <a href="https://safe-key.vercel.app/" target="_blank">
-                  <img src="./images/logo.png" alt="" class="loginID">
-                </a>
-              </div>
-
-            </div>
+           
           </div>
 
 
           <div class="swiper-slide">
             <img src="./images/img5.png" alt="" class="image">
-            <div class="loginStyling">
-              <div class="text-overlay">
-                <p id="emailArea"></p>
-                <a href="https://safe-key.vercel.app/" target="_blank">
-                  <img src="./images/logo.png" alt="" class="loginID">
-                </a>
-              </div>
-
-            </div>
-          </div> -->
+            
+          </div>
 
           
         </div>
@@ -214,25 +196,31 @@
 
 
     <div id="configureUsb" style="display:none;">
-      <button class="btn btn-primary selectFolder" id="select-usb-button" onclick="get_usb()">
+     <div id="buttonID">
+
+      <button class="btn btn-primary selectFolder buttonClass" id="select-usb-button" onclick="get_usb()">
         <span>Select USB</span>
       </button>
       <div id="output"></div>
       <button
-        class="btn btn-primary selectFolder mt-1"
+        class="btn btn-primary selectFolder mt-1 buttonClass"
         id="styleButton"
         type="button"
         onclick="openDialog()"
       >
         Select Folder
       </button>
-      <button onclick="RunInsertNewPendrive()">save pendrive</button>
+      <button onclick="RunInsertNewPendrive()" class="buttonClass" style="color: white;padding: 2px 9px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">Save pendrive</button>
+
+     </div>
       <!-- <button id="select-usb-button" onclick="get_usb()">Select USB</button> -->
 
 
-      <div>
+      <div style="    display: flex;
+      justify-content: center;">
         <div id="fileList"></div>
-        <div id="selectedFiles"></div>
+        <div id="selectedFiles" ></div>
       </div>
     </div>
 

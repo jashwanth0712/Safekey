@@ -61,14 +61,23 @@
 
 
 .custom-checkbox {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 4px;
-    /* margin-right: 8px; */
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    height: 23px;
-    width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 4px;
+  /* margin-right: 8px; */
+  /* border: 2px solid #007bff; */
+  border-radius: 4px;
+  height: 23px;
+  width: 20px;
+  transform: rotate(91deg);
+  appearance: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: white;
+  }
+
+  .custom-checkbox:checked {
+    background-color: green; /* Change to your desired color */
   }
 
   .custom-checkbox input[type="checkbox"] {
@@ -104,6 +113,8 @@
     /* background-color: #f2f2f2;
     border: 1px solid #ccc; */
     border-radius: 4px;
+    margin: 2px 15px;
+    color: white;
   }
 
 
