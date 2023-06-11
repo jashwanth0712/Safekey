@@ -1,9 +1,14 @@
 # How it works?
 
-### We have two parts in our safekey model,one is pendrive and other is desktop/laptop. 
-### Whenever we insert a new usb onto the system,the script starts running,it searches for the files present in metadata,if the file is present in the usb,it decrypts the files.
-### It stores temporary meta data as a cache data to encrypt the files,after it encyptes the files,the cache is deleted.
-### Again whenever you are ejecting the usb the script starts running and files get encrypted,so,other users cannot view the files without the key
-![Flowchart](../../Electronjs/images/image.jpeg)
-
-
+![flowchart](https://github.com/jashwanth0712/Safekey/blob/main/Electronjs/images/flowchart.png?raw=true)
+### Techstacks used
+`Electronjs` `python` `Pangea services`
+### how it works 
+### `USB`
+- USB has two hidden files namely `metadata` and `key`
+- metadata stores the list of files that the key should affect
+- key has the secret key through which encryption and decryption occurs
+### `Computer`
+- Backend script is responsible for managing and triggering operations whenever the usb is injected or ejected
+- when a new usb is inserted , the metadata and key are stored in a cache file and all the files that it affects are decrypted and unhidden 
+- when the usb is ejected , all the files inside the cache are encrypted back and the cache is freed so that no one else can read the key and files
