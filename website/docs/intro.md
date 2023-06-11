@@ -2,34 +2,53 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# SafeKey
+ Unveiling the Hidden Vault of Encrypted Files
 
-Let's discover **Docusaurus in less than 15 minutes**.
 
+ Welcome to the world of SafeKey, where hidden secrets and protected files come to life with a simple plug-and-play experience. With SafeKey, we offer you a revolutionary solution that combines advanced encryption technology with seamless file management, right at your fingertips. Say goodbye to traditional file-hiding techniques and embrace a new era of data security.
+
+SafeKey is your ultimate companion for safeguarding sensitive information on USB drives. Imagine a world where your hidden and encrypted files are instantly revealed when you connect your USB drive. SafeKey turns this vision into reality, providing you with a secure and convenient way to access and manage your confidential data.
 ## Getting Started
+###  Authentication
+  User needs to Login using his pangea credentials
 
-Get started by **creating a new site**.
+###  Encrypt the files 
+  After a successful login user can
+  1. Update USB  
+  2. New USB
+  3. Delete USB
+  4. Update Key
+  5. Transfer
+  6. Test
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Getting it up and Running 
+To get it running on your local machine follows these steps:
+  1. ```git clone https://github.com/jashwanth0712/Safekey.git ```
+  2. ``` cd Safekey/Electronjs ```
+  3. ``` npm i ```
+  4. ``` npm run start ```
 
-### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### How to build from Source
 
-## Generate a new site
+  Check for your operating system:
+  1. Windows 
+   ```
+    npm run package
+   ``` 
+  2. Linux
+   ```bash
+    npm run package-lin
+   ``` 
+## For building a distributable as .exe
 
-Generate a new Docusaurus site using the **classic template**.
+      npm run make
+  
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
 
 You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
 
 ## Start your site
 
@@ -44,6 +63,5 @@ npm run start
 
 The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+The `npm run start` command builds your app locally and serves it as an electron app.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
