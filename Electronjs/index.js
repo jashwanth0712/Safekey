@@ -21,7 +21,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile("introPage.html");
+  mainWindow.loadFile("sidebar.html");
 }
 
 function openFileDialog() {
