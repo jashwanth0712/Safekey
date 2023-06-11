@@ -11,6 +11,10 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <style>
+    body {
+      user-select: none;
+    }
+
     .container {
       position: relative;
       display: inline-block;
@@ -101,12 +105,12 @@
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
 
-    #buttonID{
+    #buttonID {
       display: flex;
       margin: 46px 175px;
     }
 
-    .buttonClass{
+    .buttonClass {
       margin: 2px 26px;
       padding: 10px 2px;
       border-radius: 13px;
@@ -115,14 +119,14 @@
       border: 2px solid #442c85;
     }
 
-    .deleteClass{
+    .deleteClass {
       margin: 24px 26px;
-    padding: 10px 2px;
-    border-radius: 13px;
-    font-size: 20px;
-    width: 256px;
-    color: wheat;
-    background-color: #d30b0b;
+      padding: 10px 2px;
+      border-radius: 13px;
+      font-size: 20px;
+      width: 256px;
+      color: wheat;
+      background-color: #d30b0b;
     }
   </style>
 </head>
@@ -157,14 +161,14 @@
         <span class="tooltip">Transfer</span>
       </li>
       <li>
-        <li>
-          <a onclick="RetrieveDashOpenUsb()">
-            <i class="bx bx-cart-alt"></i>
-            <span class="link_name">Retrieve</span>
-          </a>
-          <span class="tooltip">Retrieve</span>
-        </li>
-        <li>
+      <li>
+        <a onclick="RetrieveDashOpenUsb()">
+          <i class="bx bx-cart-alt"></i>
+          <span class="link_name">Retrieve</span>
+        </a>
+        <span class="tooltip">Retrieve</span>
+      </li>
+      <li>
         <a href="introPage.html">
           <i class="bx bx-cart-alt"></i>
           <span class="link_name">Go to Home</span>
@@ -184,66 +188,35 @@
     </ul>
   </div>
   <section class="home-section">
-    
+
     <!-- <p id="emailArea"></p> -->
     <!--below code is corousel-->
-    
-
-   
-      <div id="Carousel" class="swiper mySwiper" style="display:block;">
-        
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <img src="./images/img2.png" alt="" class="image">
-            
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./images/img3.png" alt="" class="image">
-            
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./images/img4.png" alt="" class="image">
-           
-          </div>
 
 
-          <div class="swiper-slide">
-            <img src="./images/img5.png" alt="" class="image">
-            
-          </div>
 
-          
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    <div class="loginStyling">
-      <div class="text-overlay">
-        <p id="emailArea" class="emailID"></p>
-        <a href="https://safe-key.vercel.app/" target="_blank">
-          <img src="./images/logo.png" alt="" class="loginID">
-        </a>
-      </div>
-    </div>
     <div id="Carousel" class="swiper mySwiper" style="display:block;">
+
       <div class="swiper-wrapper">
+
         <div class="swiper-slide">
           <img src="./images/img2.png" alt="" class="image">
+
         </div>
 
         <div class="swiper-slide">
           <img src="./images/img3.png" alt="" class="image">
+
         </div>
 
         <div class="swiper-slide">
           <img src="./images/img4.png" alt="" class="image">
+
         </div>
+
 
         <div class="swiper-slide">
           <img src="./images/img5.png" alt="" class="image">
+
         </div>
 
 
@@ -251,37 +224,67 @@
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
-    </div>
+
+      <div class="loginStyling">
+        <div class="text-overlay">
+          <p id="emailArea" class="emailID">SafeKey User</p>
+          <a href="https://safe-key.vercel.app/" target="_blank">
+            <img src="./images/logo.png" alt="" class="loginID">
+          </a>
+        </div>
+      </div>
+
+      <div id="Carousel" class="swiper mySwiper" style="display:block;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/img2.png" alt="" class="image">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./images/img3.png" alt="" class="image">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./images/img4.png" alt="" class="image">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./images/img5.png" alt="" class="image">
+          </div>
+
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
 
 
     <div id="configureUsb" style="display:none;">
-     <div id="buttonID">
+      <div id="buttonID">
 
-      <button class="btn btn-primary selectFolder buttonClass" id="select-usb-button" onclick="get_usb()">
-        <span>Select USB</span>
-      </button>
-      <div id="output"></div>
-      <button
-        class="btn btn-primary selectFolder mt-1 buttonClass"
-        id="styleButton"
-        type="button"
-        onclick="openDialog()"
-      >
+        <button class="btn btn-primary selectFolder buttonClass" id="select-usb-button" onclick="get_usb()">
+          <span>Select USB</span>
+        </button>
+        <div id="output"></div>
+        <button class="btn btn-primary selectFolder mt-1 buttonClass" id="styleButton" type="button"
+          onclick="openDialog()">
 
-        Select Folder
-      </button>
-      <button onclick="RunInsertNewPendrive()" class="buttonClass" style="color: white;padding: 2px 9px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">Save pendrive</button>
+          Select Folder
+        </button>
+        <button onclick="RunInsertNewPendrive()" class="buttonClass" style="color: white;padding: 2px 9px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">Save
+          pendrive</button>
 
-     </div>
+      </div>
       <!-- <button id="select-usb-button" onclick="get_usb()">Select USB</button> -->
 
 
       <div style="    display: flex;
       justify-content: center;">
         <div id="fileList"></div>
-        <div id="selectedFiles" ></div>
+        <div id="selectedFiles"></div>
       </div>
     </div>
 
@@ -292,12 +295,12 @@
       <div id="output-show-for-deleting"></div>
       <button onclick="OnClickDeleteUsb()" id="DeleteUsb" class="deleteClass">Delete</button>
       <div id="usbDisplayerForDelete">
-        
+
 
       </div>
     </div>
 
-    
+
     <div id="retrieveUsb" style="display:none;">
       <button class="btn btn-primary selectFolder" id="select-usb-button-for-retrieve" onclick="get_usb_for_retrieve()">
         <span>Select USB</span>
@@ -305,7 +308,7 @@
       <div id="output-show-for-retrieve"></div>
       <button onclick="retriveUsb()" id="RetrieveUsb">Retrieve</button>
       <div id="usbDisplayerForRetrive">
-        
+
       </div>
     </div>
 
@@ -313,25 +316,26 @@
     <div id="transferUsb" style="display:none;">
       <div class="Transercontainer">
         <div class="main">
-            <div>
-                <p>From</p>
-                <button class="btn btn-primary selectFolder btnTransfer" id="select-usb-button-from" onclick="get_usb_from()">
-                    <span>Select USB</span>
-                  </button>
-                <div id="outputFrom"></div>
-            </div>
-            <div>
-                <p>To</p>
-                <button class="btn btn-primary selectFolder btnTransfer" id="select-usb-button-to" onclick="get_usb_to()">
-                    <span>Select USB</span>
-                  </button>
-                  <div id="outputTo"></div>
-            </div>
+          <div>
+            <p>From</p>
+            <button class="btn btn-primary selectFolder btnTransfer" id="select-usb-button-from"
+              onclick="get_usb_from()">
+              <span>Select USB</span>
+            </button>
+            <div id="outputFrom"></div>
+          </div>
+          <div>
+            <p>To</p>
+            <button class="btn btn-primary selectFolder btnTransfer" id="select-usb-button-to" onclick="get_usb_to()">
+              <span>Select USB</span>
+            </button>
+            <div id="outputTo"></div>
+          </div>
         </div>
         <div>
-            <button onclick="Transfer()">Transfer</button>
+          <button onclick="Transfer()">Transfer</button>
         </div>
-    </div>
+      </div>
     </div>
 
 
