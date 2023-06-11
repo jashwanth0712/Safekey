@@ -110,7 +110,11 @@ async function OnClickDeleteUsb(){
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
 
     pythonProcess.stdout.on('data', (data) => {
+        output=data.toString()
         console.log(data.toString());
+        setTimeout(() => {
+            window.location.href = 'animation.html';
+        }, 3); //
     });pythonProcess.on('error', (error) => {
         console.error('An error occurred while executing the Python script:', error);
       });
