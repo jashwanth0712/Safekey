@@ -106,7 +106,7 @@ async function OnClickDeleteUsb(){
     // console.log("type : ",type)
     // let key = dropDownForDelete.value;
 
-    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = PATH_TO_SAFEKEY;
     const scriptArgs = ['-d',type];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
@@ -138,7 +138,7 @@ async function OnClickDeleteUsb(){
 }
 
 function del_usb(type) {
-    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = PATH_TO_SAFEKEY;
     const scriptArgs = ['-d',type];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
@@ -164,7 +164,7 @@ function TransferDashOpenUsb(){
 }
 
 function get_usb_for_delete() {
-    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = PATH_TO_SAFEKEY;
     const scriptArgs = ['-gu'];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
@@ -264,7 +264,7 @@ function createDropdownRetrive(entries) {
 }
 
 function get_usb_for_retrieve() {
-    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = PATH_TO_SAFEKEY;
     const scriptArgs = ['-gu'];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
@@ -338,7 +338,7 @@ async function retriveUsb(){
     });
 
 
-    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = PATH_TO_SAFEKEY;
     const scriptArgs = ['-lk',keyNeedToBeInserted , type, value];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);

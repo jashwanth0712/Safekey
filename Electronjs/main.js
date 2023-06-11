@@ -133,7 +133,7 @@ function RunInsertNewPendrive() {
 
     //getting newKey from scripts
 
-    const pythonScriptPath = 'C:\\Users\\rushik\\Desktop\\gitClones\\Safekey\\scripts\\safekey.py';
+    const pythonScriptPath = PATH_TO_SAFEKEY;
     const scriptArgs = ['-l', type.text, value];
     console.log('python', [pythonScriptPath, ...scriptArgs]);
     const pythonProcess = spawn('python', [pythonScriptPath, ...scriptArgs]);
