@@ -150,13 +150,21 @@
         <span class="tooltip">Delete USB</span>
       </li>
       <li>
-        <a href="transfer.html">
+        <a onclick="TransferDashOpenUsb()">
           <i class="bx bx-cart-alt"></i>
           <span class="link_name">Transfer</span>
         </a>
         <span class="tooltip">Transfer</span>
       </li>
       <li>
+        <li>
+          <a onclick="RetrieveDashOpenUsb()">
+            <i class="bx bx-cart-alt"></i>
+            <span class="link_name">Retrieve</span>
+          </a>
+          <span class="tooltip">Retrieve</span>
+        </li>
+        <li>
         <a href="introPage.html">
           <i class="bx bx-cart-alt"></i>
           <span class="link_name">Go to Home</span>
@@ -278,16 +286,59 @@
     </div>
 
     <div id="deleteUsb" style="display:none;">
+      <button class="btn btn-primary selectFolder" id="select-usb-button-for-delete" onclick="get_usb_for_delete()">
+        <span>Select USB</span>
+      </button>
+      <div id="output-show-for-deleting"></div>
       <button onclick="OnClickDeleteUsb()" id="DeleteUsb" class="deleteClass">Delete</button>
-      <div id="usbDisplayer">
+      <div id="usbDisplayerForDelete">
+        
 
       </div>
+    </div>
+
+    
+    <div id="retrieveUsb" style="display:none;">
+      <button class="btn btn-primary selectFolder" id="select-usb-button-for-retrieve" onclick="get_usb_for_retrieve()">
+        <span>Select USB</span>
+      </button>
+      <div id="output-show-for-retrieve"></div>
+      <button onclick="retriveUsb()" id="RetrieveUsb">Retrieve</button>
+      <div id="usbDisplayerForRetrive">
+        
+      </div>
+    </div>
+
+
+    <div id="transferUsb" style="display:none;">
+      <div class="Transercontainer">
+        <div class="main">
+            <div>
+                <p>From</p>
+                <button class="btn btn-primary selectFolder btnTransfer" id="select-usb-button-from" onclick="get_usb_from()">
+                    <span>Select USB</span>
+                  </button>
+                <div id="outputFrom"></div>
+            </div>
+            <div>
+                <p>To</p>
+                <button class="btn btn-primary selectFolder btnTransfer" id="select-usb-button-to" onclick="get_usb_to()">
+                    <span>Select USB</span>
+                  </button>
+                  <div id="outputTo"></div>
+            </div>
+        </div>
+        <div>
+            <button onclick="Transfer()">Transfer</button>
+        </div>
+    </div>
     </div>
 
 
   </section>
   <!-- Scripts -->
   <script src="sidebar.js"></script>
+  <script src="transfer.js"></script>
   <script src="main.js"></script>
   <script src="test.js"></script>
   <script src="deleteUsb.js"></script>
