@@ -1,5 +1,5 @@
 ## Follow these Commands to get started
-1. You need these files to get started [](url) and [](url). Make Sure you know the path to these files.
+1. You need these files to get started [safekey.py](https://github.com/jashwanth0712/Safekey/blob/main/scripts/safekey.py) and [usb_tracer.py](https://github.com/jashwanth0712/Safekey/blob/main/scripts/usb_tracer.py). Make Sure you know the path to these files.
 2. Follow these commands. </br></br>
     * **List all the USB drives that are connected to the computer system.**
     
