@@ -14,11 +14,11 @@ In the unfortunate event of losing the USB key, there is no need to panic. Safe 
 Safe Key prioritizes the security of your files and employs robust measures to safeguard your data. By using encryption algorithms and hiding files when the USB key is not present, it ensures that unauthorized individuals cannot access your sensitive information. Additionally, the Pangea vault securely stores the secret key, reducing the risk of key loss or unauthorized retrieval.
 
 ### Challenges faced 
-- *Checkbox styling*: Border radius is not applied to checkboxes.
-- *AppImage configuration*: Unable to configure in AppImage.
-- *Root path tracing*: Root paths are not being traced.
-- *Resource consumption*: Electron.js applications can consume significant system resources, especially for heavy computations or large datasets.
-- *Memory usage*: Electron.js applications tend to use more memory compared to traditional desktop applications, requiring memory management strategies.
-- *Cross-platform packaging*: Packaging Electron.js applications for different platforms (Windows, macOS, Linux) can be challenging, requiring additional configuration and testing.
-- *Debugging complexity*: Debugging Electron.js applications is more complex, especially for issues related to the main process, renderer processes, and inter-process communication (IPC).
-- *Ecosystem management*: The vast Electron.js ecosystem with its various packages, frameworks, and plugins can be overwhelming, necessitating careful selection and compatibility maintenance.
+- Checkbox styling: Border radius is not applied to checkboxes.
+- AppImage configuration: Unable to configure in AppImage.
+- Root path tracing: Root paths are not being traced.
+- Resource consumption: Electron.js applications can consume significant system resources, especially for heavy computations or large datasets.
+- Memory usage: Electron.js applications tend to use more memory compared to traditional desktop applications, requiring memory management strategies.
+- Cross-platform packaging: Packaging Electron.js applications for different platforms (Windows, macOS, Linux) can be challenging, requiring additional configuration and testing.
+- Debugging complexity: Debugging Electron.js applications is more complex, especially for issues related to the main process, renderer processes, and inter-process communication (IPC).
+- Ecosystem management: The vast Electron.js ecosystem with its various packages, frameworks, and plugins can be overwhelming, necessitating careful selection and compatibility maintenance.
