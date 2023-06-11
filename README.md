@@ -1,51 +1,15 @@
-# Safekey
-Submission for pangea hackathon 
+# Safe Key: Secure File Protection Software
+Safe Key is a powerful software solution designed to keep files secure by utilizing a USB device as a key. With Safe Key, you can ensure the confidentiality and integrity of your sensitive data through encryption and secure storage. This software provides an extra layer of protection for users who require enhanced security measures.
 
-# Encryption and Decryption Script
+### File Encryption and Hiding 🔐
+Safe Key employs advanced encryption algorithms to encrypt and hide files when the USB device is not inserted. This means that without the USB key, the files are inaccessible and remain hidden from prying eyes. By encrypting the files, even if they are somehow accessed, they cannot be deciphered without the correct key.
 
-This repository contains a collection of encryption and decryption scripts that can be used to secure and protect sensitive data. The scripts are designed to provide easy-to-use methods for encrypting plaintext and decrypting ciphertext using various encryption algorithms.
+### USB Key Activation 🗝️
+Once the USB device with the correct key is inserted into the computer, Safe Key automatically decrypts and reveals the hidden files. The decrypted files become visible and accessible to authorized users, allowing them to work with the files seamlessly. This activation process provides convenient access to your protected files while maintaining their security.
 
-## Table of Contents
+### Key Recovery 🤕
+In the unfortunate event of losing the USB key, there is no need to panic. Safe Key has a built-in solution for key recovery. The secret key associated with the USB device is securely stored in the Pangea vault. Users can retrieve the key from the vault and transfer it to a new USB device using the Safe Key software. This ensures that users can regain access to their encrypted files without compromising their security.
 
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Supported Algorithms](#supported-algorithms)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Getting Started
-
-To get started with the encryption and decryption scripts, follow these steps:
-
-1. Clone the repository to your local machine:
-
-
-2. Install the necessary dependencies. Please refer to the specific script's documentation for any additional requirements.
-
-3. Start using the encryption and decryption scripts in your project.
-
-## Usage
-
-Each script in this repository provides a command-line interface (CLI) that allows you to easily encrypt and decrypt data. The scripts typically accept input in the form of file paths or user input and output the encrypted or decrypted data to the console or specified file.
-
-
-## Supported Algorithms
-
-The encryption and decryption scripts support the following algorithms:
-
-- AES-256
-- RSA
-- Blowfish
-- Triple DES
-
-Please refer to each script's documentation for more information on how to use these algorithms.
-
-## Contributing
-
-Contributions to this project are welcome! If you have any suggestions, bug reports, or improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
+### Enhanced Security 🛟
+Safe Key prioritizes the security of your files and employs robust measures to safeguard your data. By using encryption algorithms and hiding files when the USB key is not present, it ensures that unauthorized individuals cannot access your sensitive information. Additionally, the Pangea vault securely stores the secret key, reducing the risk of key loss or unauthorized retrieval.
 
