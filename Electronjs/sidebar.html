@@ -66,20 +66,28 @@
       object-fit: cover;
     }
 
-    #pID{
-      padding: 11px 26px;
-      margin: -280px 491px;
+    .pID{
+      padding: 5px 20px;
+    margin: -280px 491px;
     height: 52px;
     border-radius: 139px;
-    background: green;
+    background: white;
     display: flex;
+    width: 182px;
+    color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
 
-    #loginID{
+    .loginID{
       height: 50px;
-      width: 50px;
-      margin: -9px 10px;
+    width: 50px;
+    margin: -1px 18px;
     border-radius: 41px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .loginStyling{
+      display: flex;
     }
   </style>
 </head>
@@ -142,44 +150,61 @@
       <div id="Carousel" class="swiper mySwiper" style="display:block;">
         
         <div class="swiper-wrapper">
-          <!-- <div>
-            <p id="emailArea"></p>
-          </div> -->
+
           <div class="swiper-slide">
-            
             <img src="./images/img2.png" alt="" class="image">
-            <div class="text-overlay" id="pID">
-              
-              <p id="emailArea"></p>
-              <img src="./images/logo.png" alt="" id="loginID">
-            </div>
-            
-            
-          </div>
-          <!-- <div class="swiper-slide">
-            <img src="./images/img2.png" alt="">
-            <div>
-              <p id="emailArea"></p>
+            <div class="loginStyling">
+              <div class="text-overlay pID">
+                <p id="emailArea"></p>
+                <a href="https://safe-key.vercel.app/" target="_blank">
+                  <img src="./images/logo.png" alt="" class="loginID">
+                </a>
+              </div>
+
             </div>
           </div>
+
           <div class="swiper-slide">
-            <img src="./images/img3.png" alt="">
-            <div>
-              <p id="emailArea"></p>
+            <img src="./images/img3.png" alt="" class="image">
+            <div class="loginStyling">
+              <div class="text-overlay pID" >
+                <p id="emailArea"></p>
+                <a href="https://safe-key.vercel.app/" target="_blank">
+                  <img src="./images/logo.png" alt="" class="loginID">
+                </a>
+              </div>
+
             </div>
           </div>
+
           <div class="swiper-slide">
-            <img src="./images/img4.png" alt="">
-            <div>
-              <p id="emailArea"></p>
+            <img src="./images/img4.png" alt="" class="image">
+            <div class="loginStyling">
+              <div class="text-overlay pID">
+                <p id="emailArea"></p>
+                <a href="https://safe-key.vercel.app/" target="_blank">
+                  <img src="./images/logo.png" alt="" class="loginID">
+                </a>
+              </div>
+
             </div>
           </div>
+
+
           <div class="swiper-slide">
-            <img src="./images/img5.png" alt="">
-            <div>
-              <p id="emailArea"></p>
-            </div> -->
-          </div>
+            <img src="./images/img5.png" alt="" class="image">
+            <div class="loginStyling">
+              <div class="text-overlay">
+                <p id="emailArea"></p>
+                <a href="https://safe-key.vercel.app/" target="_blank">
+                  <img src="./images/logo.png" alt="" class="loginID">
+                </a>
+              </div>
+
+            </div>
+          </div> -->
+
+          
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
