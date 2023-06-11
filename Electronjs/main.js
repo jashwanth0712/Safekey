@@ -77,6 +77,18 @@ function EmptyTheFileList() {
     div.remove();
   }
 }
+function displaySelectedFile(file) {
+  const selectedFileDiv = document.createElement("div");
+  selectedFileDiv.textContent = file;
+  selectedFileDiv.style.display = "none";
+  selectedFileDiv.dataset.filePath = SelectedFolderPath + file; // Store the file path as a data attribute
+  selectedFilesDiv.appendChild(selectedFileDiv);
+
+  const filePath = selectedFileDiv.dataset.filePath;
+  console.log("Selected file path:", filePath);
+}
+
+
 
 function openDialog() {
   EmptyTheFileList();

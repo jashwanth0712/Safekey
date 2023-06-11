@@ -114,6 +114,16 @@
       background-color: #442c85;
       border: 2px solid #442c85;
     }
+
+    .deleteClass{
+      margin: 24px 26px;
+    padding: 10px 2px;
+    border-radius: 13px;
+    font-size: 20px;
+    width: 256px;
+    color: wheat;
+    background-color: #d30b0b;
+    }
   </style>
 </head>
 
@@ -166,7 +176,6 @@
     </ul>
   </div>
   <section class="home-section">
-<<<<<<< HEAD
     
     <!-- <p id="emailArea"></p> -->
     <!--below code is corousel-->
@@ -203,14 +212,12 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
-=======
     <div class="loginStyling">
       <div class="text-overlay">
         <p id="emailArea" class="emailID"></p>
         <a href="https://safe-key.vercel.app/" target="_blank">
           <img src="./images/logo.png" alt="" class="loginID">
         </a>
->>>>>>> 7c1a3f47d706f61ca59f2ef5e977dfc911ba7172
       </div>
     </div>
     <div id="Carousel" class="swiper mySwiper" style="display:block;">
@@ -247,16 +254,13 @@
         <span>Select USB</span>
       </button>
       <div id="output"></div>
-<<<<<<< HEAD
       <button
         class="btn btn-primary selectFolder mt-1 buttonClass"
         id="styleButton"
         type="button"
         onclick="openDialog()"
       >
-=======
-      <button class="btn btn-primary selectFolder mt-1" id="styleButton" type="button" onclick="openDialog()">
->>>>>>> 7c1a3f47d706f61ca59f2ef5e977dfc911ba7172
+
         Select Folder
       </button>
       <button onclick="RunInsertNewPendrive()" class="buttonClass" style="color: white;padding: 2px 9px;
@@ -274,7 +278,7 @@
     </div>
 
     <div id="deleteUsb" style="display:none;">
-      <button onclick="OnClickDeleteUsb()" id="DeleteUsb">Delete</button>
+      <button onclick="OnClickDeleteUsb()" id="DeleteUsb" class="deleteClass">Delete</button>
       <div id="usbDisplayer">
 
       </div>
